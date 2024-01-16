@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="employee-container" id="employeeContainer">
+        
+    </div>
+    <button onclick="prevPage()">Previous</button>
+    <button onclick="nextPage()">Next</button>
+    
+    <div>
+    <button onclick="sortBySalaryAsc()">Sort by Salary (Low to High)</button>
+    <button onclick="sortBySalaryDesc()">Sort by Salary (High to Low)</button>
+
+    <!-- Filtering Buttons -->
+    <label for="departmentFilter">Filter by Department:</label>
+    <select id="departmentFilter" onchange="filterByDepartment()">
+        <option value="">All Departments</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Operations">Operations</option>
+        <option value="Finance">Finance</option>
+        <option value="HR">HR</option>
+    </select>
+
+    <button onclick="filterByGender('Male')">Only Male</button>
+    <button onclick="filterByGender('Female')">Only Female</button>
+   </div>
+
+    <script src="employee.js"></script>
+</body>
+</html>
